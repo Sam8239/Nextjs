@@ -1,3 +1,12 @@
+import fs from "fs";
+// All blogs are stored in the blog-data folder.
 export default function handler(req, res) {
-  res.status(200).json({ name: "John Doe" });
+  fs.readdir("blog-data", "utf8", (err, data) => {
+    console.log(data);
+    if (err) {
+      console.error(err);
+      return;
+    }
+    res.status(200).json({ data });
+  });
 }
