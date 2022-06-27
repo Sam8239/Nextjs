@@ -1,0 +1,14 @@
+.nav ul {
+    background-color: #f8f9;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+    list-style-type: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.nav ul a:nth-child(odd) {
+    color: red;
+}
